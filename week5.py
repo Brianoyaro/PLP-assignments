@@ -50,3 +50,30 @@ print(gaming_phone.install_app("PUBG"))
 print(gaming_phone.play_game("Genshin Impact"))
 print(gaming_phone.get_battery())
 
+
+
+class Animal():
+    def __init__(self, color, is_pet):
+        self.color = color
+        self.is_pet = is_pet
+
+class Dog(Animal):
+    def __init__(self, color, is_pet = True):
+        super().__init__(color, is_pet)
+    def move(self):
+        return "paw paw"
+
+class Falcon(Animal):
+    def __init__(self, color, is_pet = False):
+        super().__init__(color, is_pet)
+    def move(self):
+        return "flewww flewww"
+
+dog1 = Dog(color = 'brown')
+dog2 = Dog(color = 'black')
+
+bird1 = Falcon(color = "white")
+
+print(dog1.move())
+print(bird1.move())
+print(dog2.move())
